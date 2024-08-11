@@ -1,0 +1,532 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Replace with your background image */
+    background-size: auto;
+    background-position: center;
+    color: #333;
+}
+
+
+/* General header styling */
+header {
+    padding: 40px 20px; /* Increased padding for a larger header */
+    background-color: black; /* Solid background color for the header */
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* Ensure that the nav items are positioned relative to the header */
+}
+
+/* Styling for the company name */
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Larger font size for emphasis */
+    font-weight: 700; /* Bold weight for prominence */
+    letter-spacing: 1px; /* Slight letter spacing for a modern look */
+    text-transform: uppercase; /* Uppercase for a professional appearance */
+    background: linear-gradient(90deg, #ffb400, #ff9500); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    margin-bottom: 10px;
+}
+
+/* Styling for the tagline */
+header p {
+    margin: 0;
+    font-size: 1.5em; /* Larger font size for the tagline */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent black background */
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for a polished look */
+    display: inline-block;
+    font-style: italic; /* Italicized for emphasis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure items wrap to the next line if needed */
+}
+
+nav ul li {
+    margin: 0 10px; /* Adjust margin for better spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    background-color: #ffb400; /* Similar background to the columns */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+	font-weight: bold; 
+}
+
+nav ul li a:hover {
+    background-color: #ff9500; /* Slightly darker shade on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space out items vertically */
+    }
+
+    nav ul li a {
+        padding: 15px; /* Increase padding for touch targets */
+    }
+}
+
+main {
+    padding: 20px;
+}
+/* General styling for the Home section */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#home h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #007bff; /* Color matching the header */
+}
+
+#home p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+.image-transition {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: pixelate 20s infinite;
+}
+
+
+
+#image1 { background-image: url('image1.jpg'); }
+#image2 { background-image: url('image2.jpg'); }
+#image3 { background-image: url('image3.jpg'); }
+#image4 { background-image: url('image4.jpg'); }
+
+@keyframes pixelate {
+    0%, 20% { opacity: 1; }
+    25%, 45% { opacity: 0; }
+    50%, 70% { opacity: 1; }
+    75%, 95% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+form table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+form table td {
+    padding: 10px;
+}
+
+form table input,
+form table textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form table button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+height: 50px;
+}
+/* General styling for services section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.service-column {
+    width: 30%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.service-column h3 {
+    color: #ffb400;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-column p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .service-column {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-column {
+        width: 100%;
+    }
+}
+
+/* Consultation Section Styling */
+#consultation {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#consultation h2 {
+    color: #ffb400;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#consultation-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#consultation-form table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+#consultation-form td {
+    vertical-align: top;
+}
+
+#consultation-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#consultation-form input[type="text"],
+#consultation-form input[type="email"],
+#consultation-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#consultation-form button {
+    background-color: #ffb400;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+#consultation-form button:hover {
+    background-color: #e5a300;
+}
+
+/* Responsive styling for consultation form */
+@media (max-width: 768px) {
+    #consultation-form table {
+        border-spacing: 5px;
+    }
+
+    #consultation-form button {
+        padding: 15px;
+    }
+}
+/* General styling for the About section */
+#about {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Three-column layout */
+.about-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.about-column {
+    width: 30%;
+    padding: 20px;
+    background-color: #ffffff; /* Solid background for the columns */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.about-column h3 {
+    color: #ffb400;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.about-column p,
+.about-column ul {
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-column ul {
+    padding-left: 20px;
+}
+
+/* Responsive styling for the About section */
+@media (max-width: 768px) {
+    .about-column {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-column {
+        width: 100%;
+    }
+}
+
+/* General styling for the Contact Us section */
+#contact {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background outside the column */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Contact container to center content */
+.contact-container {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff; /* Solid background similar to other sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Circular Image styling */
+.contact-image img {
+    width: 150px; /* Standard passport size */
+    height: 150px; /* Standard passport size */
+    border-radius: 50%; /* Circular frame */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Contact Information styling */
+.contact-info h3 {
+    color: #ffb400;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Responsive styling for the Contact Us section */
+@media (max-width: 768px) {
+    #contact {
+        text-align: left;
+    }
+
+    .contact-container {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+//new
+
+/* General styling for the carousel section */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0; /* Light background for the section */
+}
+
+/* Styling for the carousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Styling for the carousel images container */
+.carousel-images {
+    display: flex;
+    width: 400%; /* Width = 100% * number of images */
+    height: 100%;
+    transition: transform 1.5s ease-in-out;
+}
+
+/* Styling for individual carousel images */
+.carousel-image {
+    flex: 1 0 100%; /* Each image takes up 100% of the carousel width */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Making the images visible */
+.carousel-image:nth-child(1) {
+    background-image: url('image1.jpg');
+}
+.carousel-image:nth-child(2) {
+    background-image: url('image2.jpg');
+}
+.carousel-image:nth-child(3) {
+    background-image: url('image3.jpg');
+}
+.carousel-image:nth-child(4) {
+    background-image: url('image4.jpg');
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #home {
+        padding: 30px 10px;
+box-sizing: border-box; 
+    }
+
+    .carousel {
+        height: 300px;
+    }
+}
+
+//Abhinay changes
+
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+overflow: hidden;
+  }
+
+  .carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+overflow: hidden;  }
+
+  .carousel-image.active {
+    opacity: 1;
+    z-index: 2;
+  }
