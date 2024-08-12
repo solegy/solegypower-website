@@ -53,3 +53,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(showNextImage, 5000); // Change image every 5 seconds
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
+
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.classList.add('menu-overlay');
+    body.appendChild(overlay);
+
+    function toggleMenu() {
+        const isActive = navMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.style.overflow = isActive ? 'hidden' : 'auto';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a menu item
+    navMenu.querySelectorAll('a').forEach(item => {
+        item.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            body.style.overflow = 'auto';
+        });
+    });
+
+    // Close menu when clicking on the overlay
+    overlay.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = 'auto';
+    });
+});
+
