@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('background.jpg'); /* Replace with your background image */
+    background-image: url('../asset/background.jpg'); /* Replace with your background image */
     background-size: auto;
     background-position: center;
     color: #333;
@@ -144,10 +144,10 @@ main {
 
 
 
-#image1 { background-image: url('image1.jpg'); }
-#image2 { background-image: url('image2.jpg'); }
-#image3 { background-image: url('image3.jpg'); }
-#image4 { background-image: url('image4.jpg'); }
+#image1 { background-image: url('../asset/image1.jpg'); }
+#image2 { background-image: url('../asset/image2.jpg'); }
+#image3 { background-image: url('../asset/image3.jpg'); }
+#image4 { background-image: url('../asset/image4.jpg'); }
 
 @keyframes pixelate {
     0%, 20% { opacity: 1; }
@@ -468,16 +468,16 @@ height: 50px;
 
 /* Making the images visible */
 .carousel-image:nth-child(1) {
-    background-image: url('image1.jpg');
+    background-image: url('../asset/image1.jpg');
 }
 .carousel-image:nth-child(2) {
-    background-image: url('image2.jpg');
+    background-image: url('../asset/image2.jpg');
 }
 .carousel-image:nth-child(3) {
-    background-image: url('image3.jpg');
+    background-image: url('../asset/image3.jpg');
 }
 .carousel-image:nth-child(4) {
-    background-image: url('image4.jpg');
+    background-image: url('../asset/image4.jpg');
 }
 
 .carousel-image.active {
@@ -499,7 +499,7 @@ box-sizing: border-box;
   .carousel {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 500px;
     overflow: hidden;
   }
 
